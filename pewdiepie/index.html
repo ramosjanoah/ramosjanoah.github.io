@@ -154,7 +154,7 @@
 						padding: 10px;
 						width:220px;
 						height:500px;
-						font-family: verdana;	
+						font-family: "Trebuchet", sans-serif;	
 					}
 
 					.detail_text {
@@ -271,33 +271,61 @@
 					}
 
 					.main_graph_header {
-						font-size: 18px;
-						font-family: verdana;
+						font-weight: bold;
+						font-size: 22px;
+						font-family: Trebuchet, sans-serif;
 						margin-left: 40px; 
 						margin-bottom: 0px; 
-						margin-top: 10px;
-						padding-top: 0px;
+						margin-top: 20px;
+						padding-top: 5px;
+						padding-bottom: 2px;
+						padding-right: 10px;
+						padding-left: 10px;
 						color:white;
+						background-color: #262626; /*#243c63; */
+						width:320px;
+					}
+
+					.line_graph_header {
+						font-weight: bold;
+						font-size: 14px;
+						font-family: Trebuchet, sans-serif;
+						margin-left: 40px; 
+						margin-bottom: -10px; 
+						margin-top: 10px;
+						padding-top: 15px;
+						padding-bottom: -5px;
+						/*padding-right: 10px;*/
+						padding-left: 8px;
+						color:white;
+						background-color: #000; /*#243c63; */
+						width:200px;
+						height:20px;
 					}
 
 				</style>				
 				<table  width='100%' border="1">
 					<tr>
-						<td>
-							<table width="0">
-								<div id="main_graph" style="background-color: #262626; ">
-									<div class="main_graph_header">
-										<h><i>Subscriber gain/month</i></h>
+						<td style="background-color: #262626">
+							<div >
+							<table width="0" >
+									<div class="main_graph_header" style=>
+										<h>MONTHLY SUBSCRIBER GAIN</h>
 									</div>
+								<div id="main_graph" style="background-color: #262626; ">
+
 									
 
 									<script src="js/main_graph.js"></script>
 								</div>
 							</table>
+							</div>
 							<table>
 								<td height="100" style="color:white">
 									<div id="div_line" style="background: black; font-family:verdana;">
-										<p style="margin-left: 40px; margin-bottom: 0px; margin-top: 5px;"><i>Like-Dislike/Month</i></p>
+										<p style="margin-left: 40px; margin-bottom: 0px; margin-top: 5px;">
+											<div class="line_graph_header">MONTHLY LIKE &amp; DISLIKE</div>
+										</p>
 										<svg id="svg_line" ></svg>
 										<script src="js/line_graph_2.js"></script>
 									</div>
@@ -305,7 +333,7 @@
 							</table>
 						</td>
 						<td width="500" style="background: black">
-							<div class="hover_info_div"><p align="center" class="title_info"><font face="verdana">Info detail</font></p>
+							<div class="hover_info_div"><p align="center" class="title_info"><font face="Trebuchet, sans-serif">Info detail</font></p>
 								<p class="detail_text_no_event">
 									Hover to bar chart to see details.
 								</p>
