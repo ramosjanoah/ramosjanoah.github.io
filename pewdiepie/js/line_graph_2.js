@@ -1,6 +1,6 @@
 
 var margin_line = {top: 10, right: 20, bottom: 20, left: 40},
-	 width_line = 930 - margin_line.left - margin_line.right,
+	 width_line = 920 - margin_line.left - margin_line.right,
 	 height_line = 75 - margin_line.top - margin_line.bottom;
 
 var parseDate = d3.time.format("%Y-%m").parse;

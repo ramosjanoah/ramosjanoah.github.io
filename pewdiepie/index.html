@@ -275,6 +275,7 @@
 						font-size: 22px;
 						font-family: Trebuchet, sans-serif;
 						margin-left: 40px; 
+						margin-right: 150px; 
 						margin-bottom: 0px; 
 						margin-top: 20px;
 						padding-top: 5px;
@@ -303,36 +304,63 @@
 						height:20px;
 					}
 
+					.label_main_graph {
+						font-size: 12px;
+						font-weight:normal; 
+						color:white
+					}
+
+					.color_main_graph {
+						width:30px; margin-left: 10px;
+					}
+
 				</style>				
 				<table  width='100%' border="1">
 					<tr>
 						<td style="background-color: #262626">
-							<div >
-							<table width="0" >
-									<div class="main_graph_header" style=>
-										<h>MONTHLY SUBSCRIBER GAIN</h>
-									</div>
-								<div id="main_graph" style="background-color: #262626; ">
+							<div>
+								<table>
+									<tr>
+										<th>
+										<div class="main_graph_header" style=>
+											<h>MONTHLY SUBSCRIBER GAIN</h>
+										</div>
+										<th style="font-family:'roboto'"><div class="label_main_graph">2015</div></th>
+										<th width="10%"><div class="color_main_graph" style="background-color: #a2bcc4; color: #a2bcc4">d</div></th>
+										<th style="font-family:'roboto'"><div class="label_main_graph">2016</div></th>
+										<th width="10%"><div class="color_main_graph" style="background-color: #5d99ad; color: #5d99ad">d</div></th>
+										<th style="font-family:'roboto'"><div class="label_main_graph">2017</div></th>
+										<th width="10%"><div class="color_main_graph" style="background-color: #446e9c; color: #446e9c">d</div></th>
+								</table>
 
-									
-
+								<div style="width:900px" id="main_graph" style="background-color: #262626; ">
 									<script src="js/main_graph.js"></script>
 								</div>
-							</table>
 							</div>
 							<table>
 								<td height="100" style="color:white">
 									<div id="div_line" style="background: black; font-family:verdana;">
 										<p style="margin-left: 40px; margin-bottom: 0px; margin-top: 5px;">
-											<div class="line_graph_header">MONTHLY LIKE &amp; DISLIKE</div>
+											<div class="line_graph_header">
+												<table width="400%">
+													<tr>
+														<th width="600px" align="left">MONTHLY LIKE &amp; DISLIKE</th>
+														<th style="font-family:'roboto'"><div style="font-weight: normal">Like</div></th>
+														<th width="10%"><div style="width:40px; margin-left: 10px; background: #1F77B5; color: #1F77B5">d</div></th>
+														<th style="font-family:'roboto'"><div style="font-weight: normal">Dislike</div></th>
+														<th width="10%"><div style="width:40px; margin-left: 10px; background: #FF7E0E; color: #FF7E0E">d</div></th>
+												</table>
+
+											</div>
 										</p>
+
 										<svg id="svg_line" ></svg>
 										<script src="js/line_graph_2.js"></script>
 									</div>
 								</td>
 							</table>
 						</td>
-						<td width="500" style="background: black">
+						<td width="480" style="background: black">
 							<div class="hover_info_div"><p align="center" class="title_info"><font face="Trebuchet, sans-serif">Info detail</font></p>
 								<p class="detail_text_no_event">
 									Hover to bar chart to see details.

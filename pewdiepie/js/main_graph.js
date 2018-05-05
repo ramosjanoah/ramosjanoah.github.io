@@ -1,7 +1,7 @@
 
 
 var margin = {top: 20, right: 20, bottom: 30, left: 40},
-    width = 930 - margin.left - margin.right,
+    width = 920 - margin.left - margin.right,
     height = 350 - margin.top - margin.bottom;
 
 var svg = d3.select("#main_graph").append("svg")
@@ -237,7 +237,7 @@ function handleMouseOver(d) {  // Add interactivity
 	   		id_show+=1
 	   	}
 	   	if (d3.select(".detail_text_sentence").empty()) {
-	   		detail_text_div.append("p").attr("class", "detail_text_no_event").text("No special event in this month")
+	   		detail_text_div.append("p").attr("class", "detail_text_no_event").text("No special event on this month")
 	   	}
 	})
 
