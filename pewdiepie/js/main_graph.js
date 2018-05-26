@@ -208,8 +208,16 @@ function handleMouseOver(d) {  // Add interactivity
 	// DETAIL PART
     var match_event = []
     x = d3.mouse(this)[0] + 20
+    if (x > 650) {
+    	x = 650;
+    }
+    console.log("X : " + x)
     // y_hover = d3.mouse(this)[1] - 
-	y_hover = y(d.subscriber_gain) - 50
+	y_hover = y(d.subscriber_gain) * 0.70
+	if (y_hover < 30) {
+		y_hover = 10
+	}
+    console.log("Y : " + y_hover)
 	d3.tsv('data/event.txt', function(data) {
 		for (id in data) {
 			// console.log(data[id])
@@ -243,9 +251,7 @@ function handleMouseOver(d) {  // Add interactivity
 
 	// BOX PART
     var match_event = []
-    x = d3.mouse(this)[0] + 20
     // y_hover = d3.mouse(this)[1] - 
-	y_hover = y(d.subscriber_gain) - 50
 
     var text = svg.append("text")
     .attr("id", "hover_bar")
